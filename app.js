@@ -28,12 +28,19 @@ form.addEventListener('submit' , (event)=>{
     }else{
         console.error('Password does not match the required pattern');
     }
-    if (password.value !== changePassword.value) {
-        console.error('Passwords do not match');
-    } else {
+    if (password.value === changePassword.value) {
         console.log(changePassword.value);
+    } else {
+        console.error('Passwords do not match');
     }
+    if(nameRegex.test(username.value) && emailRegex.test(email.value) && passwordRegex.test(password.value) && (password.value === changePassword.value)){
+        console.log(username.value, email.value, password.value, changePassword.value)
+    }else{
+        console.error('All fields are required');
+    }
+    
 })
+
 
 
 
