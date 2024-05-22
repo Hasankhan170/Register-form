@@ -14,29 +14,29 @@ form.addEventListener('submit' , (event)=>{
     if(nameRegex.test(username.value)){
         console.log(username.value)
     }else{
-        console.error('Username does not match the required pattern');
+        alert('Username does not match the required pattern');
     }
 
     if(emailRegex.test(email.value)){
         console.log(email.value)
     }else{
-        console.error('Email does not match the required pattern');
+        alert('Email does not match the required pattern');
     }
 
     if(passwordRegex.test(password.value)){
         console.log(password.value)
     }else{
-        console.error('Password does not match the required pattern');
+        alert('Password does not match the required pattern');
     }
     if (password.value === changePassword.value) {
         console.log(changePassword.value);
     } else {
-        console.error('Passwords do not match');
+        alert('Passwords do not match');
     }
     if(nameRegex.test(username.value) && emailRegex.test(email.value) && passwordRegex.test(password.value) && (password.value === changePassword.value)){
         console.log(username.value, email.value, password.value, changePassword.value)
     }else{
-        console.error('All fields are required');
+        alert('All fields are required');
     }
     
 })
